@@ -71,9 +71,6 @@ def load_data():
 
 df = load_data()
 
-# df succesfull campaigns
-df_success_camp = df[df['result'] == 1] 
-              
 @st.cache(suppress_st_warning=True)
 def get_fvalue(val):
     feature_dict = {"No":1,"Yes":2}
