@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# visualization
-import altair as alt
-
 st.set_page_config(page_title='Streamlit - Dashboard 🤯',
                     page_icon="🚀",
                     layout='wide'
@@ -66,8 +63,7 @@ def load_data():
     df['y'] = df['y'].map({'yes': 1, 'no': 0})
     # rename the column.
     df.rename(columns = {'y':'result'}, inplace = True
-
-       return df
+    return df
              
 
 df = load_data()
@@ -86,6 +82,9 @@ def get_value(val,my_dict):
 
 app_mode = st.sidebar.selectbox('Select Page',['EDA','UML', 'SML']) #two pages
 
+# visualization
+import altair as alt 
+              
 if app_mode=='EDA':
     st.title('Describing the client :')  
     st.image('client.jpg')
