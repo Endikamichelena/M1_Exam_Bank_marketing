@@ -65,15 +65,15 @@ def load_data():
     # convert the y column to int. 0 means no and 1 means yes.
     df['y'] = df['y'].map({'yes': 1, 'no': 0})
     # rename the column.
-    df.rename(columns = {'y':'result'}, inplace = True)
-
-    # df succesfull campaigns
-    df_success_camp = df[df['result'] == 1] 
+    df.rename(columns = {'y':'result'}, inplace = True
 
     return df
 
 df = load_data()
 
+# df succesfull campaigns
+df_success_camp = df[df['result'] == 1] 
+              
 @st.cache(suppress_st_warning=True)
 def get_fvalue(val):
     feature_dict = {"No":1,"Yes":2}
@@ -98,4 +98,4 @@ if app_mode=='EDA':
     x='education:O',
     y='age:Q'
     )
-    st.box_plot
+    st.altair
