@@ -91,8 +91,9 @@ if app_mode=='EDA':
     df
     st.text("Visualization of chosen categories")
     source = df_success_camp
-    alt.Chart(source).mark_boxplot(extent='min-max').encode(
+    c = alt.Chart(source).mark_boxplot(extent='min-max').encode(
     x='education:O',
     y='age:Q'
     )
-    st.altair
+    st.altair_chart(c, use_container_width=True)
+            
