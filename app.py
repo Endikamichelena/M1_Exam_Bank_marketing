@@ -1,4 +1,53 @@
 import streamlit as st
+## libraries
+import pandas as pd
+import numpy as np
+
+# visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+import altair as alt
+from vega_datasets import data
+
+# dummies
+from sklearn.preprocessing import OneHotEncoder
+import itertools
+
+# preprocessing
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+
+# dimensionality reduction
+from sklearn.decomposition import PCA
+
+# clusters
+from sklearn.cluster import KMeans
+
+# model selection train test
+from sklearn.model_selection import train_test_split
+
+# xgboost
+from xgboost import XGBClassifier
+
+# SVC
+from sklearn.svm import SVC
+
+# Logistic Regression
+from sklearn.linear_model import LogisticRegression
+
+# sampling
+from collections import Counter
+from imblearn.under_sampling import RandomUnderSampler
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+from sklearn.metrics import classification_report, roc_auc_score
+
+# evaluation
+import shap
+
+# ELI5
+import eli5
 
 st.set_page_config(page_title='Streamlit - Dashboard 🤯',
                     page_icon="🚀",
