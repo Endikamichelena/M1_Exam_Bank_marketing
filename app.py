@@ -67,7 +67,8 @@ def load_data():
     # rename the column.
     df.rename(columns = {'y':'result'}, inplace = True
 
-    return df
+       return df
+             
 
 df = load_data()
 
