@@ -4,10 +4,7 @@ import pandas as pd
 import numpy as np
 
 # visualization
-import seaborn as sns
-sns.set()
 import altair as alt
-from vega_datasets import data
 
 # dummies
 from sklearn.preprocessing import OneHotEncoder
