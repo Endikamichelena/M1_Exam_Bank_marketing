@@ -63,9 +63,9 @@ def load_data():
     df['y'] = df['y'].map({'yes': 1, 'no': 0})
     # rename the column.
     df.rename(columns = {'y':'result'}, inplace = True
+    
     return df
-             
-
+            
 df = load_data()
 
 @st.cache(suppress_st_warning=True)
